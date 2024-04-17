@@ -1,0 +1,46 @@
+// Kehitä ohjelma, joka jatkaa käyttäjän pyytämistä syöttämään numeroita, kunnes käyttäjä syöttää 0. 
+// Tässä vaiheessa ohjelma lopettaa toimintansa. 
+// Lopetettuaan ohjelman tulisi laskea ja näyttää kaikkien syötettyjen numeroiden keskiarvo.
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Average Calculator</title>
+</head>
+<body>
+    <script>
+
+let sum = 0;
+let count = 0;
+
+while (true) {
+    let number = parseFloat(prompt("Syötä numero (0 lopettaa):"));
+    
+    if (isNaN(number)) {
+        alert("Virheellinen syöte. Syötä numeroita.");
+        continue;
+    }
+
+    if (number === 0) {
+        break;
+    }
+
+    sum += number;
+    count++;
+}
+
+if (count === 0) {
+    alert("Et syöttänyt yhtään numeroa.");
+} else {
+    let average = sum / count;
+    alert("Kaikkien syötettyjen numeroiden keskiarvo on: " + average);
+}
+
+
+
+    </script>
+</body>
+</html>

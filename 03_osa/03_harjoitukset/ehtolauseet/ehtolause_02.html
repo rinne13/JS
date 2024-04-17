@@ -1,0 +1,40 @@
+
+* Tätä ohjelmaa varten tarvitaan verkkosivua, eli se ei toimi pelkästään konsolissa.
+* Joten tee ensin html sivu ja linkkaa tämä tiedosto siihen. Prompt-ikkuna aukeaa sivulle, testaa Live serverin avulla.
+* Luo ohjelma getTemperature, joka kysyy käyttäjältä lämpötilaa Celsius-asteina ja sitten tulostaa, pitäisikö heidän pukea takki päälle (jos lämpötila on alle 15°C) vai ei.
+*/
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lämpötilaohjelma</title>
+</head>
+<body>
+    <h1>Lämpötilaohjelma</h1>
+    <script>
+        function getTemperature() {
+            let temp = parseFloat(prompt("Mikä on nykyinen lämpötila?"));
+            if (temp < 15) {
+                alert("Pue takki päälle!");
+            } else if(temp>15)
+                {
+                alert("Ei tarvitse pukea takkia.");
+            }
+            else {
+                alert ("Et antanut numeroa");
+            }
+        }
+
+        getTemperature();
+    </script>
+</body>
+</html>
+
+// Treenaa: Keksi itse samanlainen funktio eri nimellä
+
+
+
+
+// Kutsu tekemääsi funktiota

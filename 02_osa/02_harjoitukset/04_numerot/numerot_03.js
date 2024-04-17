@@ -9,3 +9,25 @@
 - Käytä console.log() -funktiota tulostamaan 'roundedNum1', 'roundedNum2', 'sqrtNum1' ja 'maxNum' konsoliin.
 - Käytä typeof operaattoria tarkistaaksesi jokaisen uuden muuttujan tietotyypin ja tulosta tulos käyttäen console.log().
 */
+
+let num1=25.37;
+let num2= 30.7;
+
+const roundedNum1=Math.round(num1);
+const roundedNum2=Math.round(num2);
+
+const sqrtNum1 = Math.sqrt(roundedNum1);
+
+const maxNum = Math.max (roundedNum1, roundedNum2);
+
+
+console.log("roundedNum1:", roundedNum1);
+console.log("roundedNum2:", roundedNum2);
+console.log("sqrtNum1:", sqrtNum1);
+console.log("maxNum:", maxNum);
+
+console.log("Type of roundedNum1:", typeof roundedNum1);
+console.log("Type of roundedNum2:", typeof roundedNum2);
+console.log("Type of sqrtNum1:", typeof sqrtNum1);
+console.log("Type of maxNum:", typeof maxNum);
+

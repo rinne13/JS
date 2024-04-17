@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAGIC 8 BALL</title>
+</head>
+<body>    
+
+<h1>question</h1>
+
+<script>
+function magic8Ball() {
+    let answers = [
+        "Kyllä, ehdottomasti.",
+        "Ei, sitä en usko.",
+        "Luultavasti.",
+        "En voi ennustaa nyt.",
+        "Kysy uudelleen myöhemmin."
+    ];
+
+    for (let answer of answers) {
+        console.log(answer);
+    }
+
+    this.getAnswer = function(question) {
+        let randomNumber = Math.random();
+        let randomAnswer = Math.floor(randomNumber * answers.length);
+        let answer = answers[randomAnswer];
+
+        console.log(question);
+        console.log(answer);
+    };
+
+    let userQuestion = prompt("Kysy kyllä-tai-ei -kysymys Magic 8-Ballilta:");
+    magic8Ball.getAnswer(userQuestion);
+    magic8Ball();
+
+}
+magic8Ball();
+
+</script>
+
+</body>
+</html>

@@ -4,7 +4,9 @@
 
 
 function fahrenheitToCelsius(fahrenheit) {
- 
+ let celsius= ((fahrenheit - 32) * 5/9);
+ let ruondedCelsius = celsius.toFixed(1);
+ return ruondedCelsius;
 }
 
 

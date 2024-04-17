@@ -9,3 +9,22 @@
 
 - Käytä typeof-operatoria tarkistaaksesi jokaisen muuttujan tietotyypin ja tulosta tulos console.log()-metodilla.
 */
+
+
+let age=25;
+console.log("age",typeof age)
+
+let name="Mikko";
+console.log("name",typeof name)
+
+let isStudent= true;
+console.log("isStudent",typeof isStudent)
+
+let hobbies=["harrastukset", "urheilu","ruoanlaitto"];
+let info = {schoolname:"BC", grade:15};
+
+console.log ("hobbies", hobbies)
+console.log ("hobbies", typeof hobbies)
+
+console.log("info", info)
+console.log("info tyyppi", typeof info)

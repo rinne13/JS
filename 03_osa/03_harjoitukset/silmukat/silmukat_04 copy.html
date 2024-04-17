@@ -1,0 +1,32 @@
+// Kehitä ohjelma, joka pyytää käyttäjää syöttämään 20 lukua. Kun kaikki luvut on syötetty, 
+//ohjelman tulisi näyttää, kuinka monta näistä luvuista on parillisia.
+// Koska käytössä on prompt, tämä toimii selaimessa html-sivun kautta. 
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Even Numbers Counter</title>
+</head>
+<body>
+    <script>
+let evenCount = 0;
+
+for (let i = 0; i < 20; i++) {
+    let number = parseInt(prompt("Syötä luku " + (i + 1) + " / 20:"));
+    if (!isNaN(number)) {
+        if (number % 2 === 0) {
+            evenCount++;
+        }
+    } else {
+        alert("Virheellinen syöte. Syötä kokonaisluku.");
+        i--; // Vähennetään i, jotta samaa lukua pyydetään uudelleen
+    }
+}
+
+alert("Parillisia lukuja: " + evenCount);
+    </script>
+</body>
+</html>
