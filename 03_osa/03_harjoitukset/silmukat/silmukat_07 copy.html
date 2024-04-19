@@ -1,0 +1,58 @@
+  <!--Tee ohjelma, joka kysyy kymmentä numeroa. Ohjelma laskee ja tulostaa summan ja keskiarvon sekä  //tulostaa pienimmän ja suurimman numeron.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Silmukat 07</title>
+</head>
+<body>
+
+    <h1>Silmukat 07</h1>
+    <h2>Katso konsoliin</h2>
+    <script>
+
+
+let summa = 0;
+let lukujenMaara = 0;
+let numerot = [];
+let maxLuku = -Infinity;
+let minLuku = Infinity;
+
+
+for (let i=0; i<10; i++){
+let syote= Number(prompt("Anna lukuja laskuihini, kiitos kaunis!"));
+
+
+if (isNaN(syote)) {
+    console.log(syote);
+} else {
+    summa+=syote;    
+    lukujenMaara ++;
+    console.log("Lukujen summa on: ", summa);
+    console.log("Lukujen määrä nyt:", lukujenMaara);
+    if (syote>maxLuku){
+        maxLuku = syote
+    }
+
+    if (syote < minLuku) {
+        minLuku = syote
+    }
+}
+
+/*
+let maxLuku=Math.max(numerot);
+let minLuku=Math.min(numerot);*/
+let keskiarvo = summa/lukujenMaara;
+console.log("Lukujen summa on: ", summa);
+console.log("Lukujen keskiarvo on: ", keskiarvo);
+console.log("Isoin annettu luku on: ", maxLuku);
+console.log("Pienin annettu luku on: ", minLuku);
+}
+
+
+</script>
+</body>
+</html>

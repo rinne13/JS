@@ -1,0 +1,52 @@
+/* Kehitä ohjelma, joka aluksi kysyy käyttäjältä yhtä numeroa. Tämän jälkeen ohjelma kysyy, haluaako käyttäjä 
+jatkaa numeroiden antamista seuraavalla kysymyksellä: 'Haluatko jatkaa numeroiden antamista? (k/e)'. 
+Jos käyttäjä vastaa 'k', ohjelma pyytää toista numeroa. Jos vastaus on 'e', ohjelma lopettaa. 
+Lopetettuaan ohjelma laskee ja näyttää kaikkien syötettyjen numeroiden keskiarvon.*/
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Silmukat 06</title>
+</head>
+<body>
+    <script>
+
+let sum = 0;
+let count = 0;
+
+do {
+    let number = Number(prompt("Syötä numero:"));
+
+    if (!isNaN(number)) {
+        sum += number;
+        count++;
+    } else {
+        alert("Virheellinen syöte. Syötä numero.");
+    }
+
+    let choice = prompt("Haluatko jatkaa numeroiden antamista? (k/e)");
+
+    while (choice !== 'k' && choice !== 'e') {
+        choice = prompt("Virheellinen valinta. Haluatko jatkaa numeroiden antamista? (k/e)").toLowerCase();
+    }
+
+    if (choice === 'e') {
+        break;
+    }
+
+} while (true);
+
+if (count > 0) {
+    let average = sum / count;
+    alert("Syötettyjen numeroiden keskiarvo on: " + average.toFixed(2));
+} else {
+    alert("Et syöttänyt yhtään numeroa.");
+}
+
+</script>
+</body>
+</html>

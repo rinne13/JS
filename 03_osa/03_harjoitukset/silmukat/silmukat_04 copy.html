@@ -12,21 +12,35 @@
 </head>
 <body>
     <script>
-let evenCount = 0;
+
+let parilliset = 0;
+
 
 for (let i = 0; i < 20; i++) {
-    let number = parseInt(prompt("Syötä luku " + (i + 1) + " / 20:"));
-    if (!isNaN(number)) {
-        if (number % 2 === 0) {
-            evenCount++;
-        }
-    } else {
-        alert("Virheellinen syöte. Syötä kokonaisluku.");
-        i--; // Vähennetään i, jotta samaa lukua pyydetään uudelleen
+    let syote = Number(prompt("syötä numero"))
+    console.log("syöte on:", syote);
+ 
+    if (syote % 2 == 0){
+        parilliset++
     }
+
+    console.log("parilliset on:", parilliset)
+
 }
 
-alert("Parillisia lukuja: " + evenCount);
+let laskuri=0
+let parillisetLuvut = 0;
+
+do {
+    let input = Number(prompt("Anna lisää lukuja"))
+    if (input%2==0){
+        parillisetLuvut++
+    }
+    laskuri++
+} 
+while (laskuri != 20)
+
+console.log("Parillisia lukuja oli: " + parillisetLuvut)
     </script>
 </body>
 </html>
