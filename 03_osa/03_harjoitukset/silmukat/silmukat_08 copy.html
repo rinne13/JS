@@ -11,20 +11,29 @@
 </head>
 <body>
     <script>
+let numbers = [];
+let maxNumber = -Infinity;
+let minNumber = Infinity;
 
-        let choice = 0;
-        let numbers = [];
-        let maxNumber = -Infinity;
-        let minNumber = Infinity;
-    
-function choice(int) {
-    let choice = prompt("Kuinka monta numeroa haluat syöttää?")
-    if (choice = 0) {
-        break;
+function getNumbers() {
+    let choice = parseInt(prompt("Kuinka monta numeroa haluat syöttää?"));
+
+    if (choice === 0) {
+        return;
     }
+
+    for (let i = 0; i < choice; i++) {
+        let number = parseFloat(prompt(`Syötä numero ${i + 1}:`));
+        numbers.push(number);
+        maxNumber = Math.max(maxNumber, number);
+        minNumber = Math.min(minNumber, number);
+    }
+
+    console.log(`Pienin numero: ${minNumber}`);
+    console.log(`Suurin numero: ${maxNumber}`);
 }
 
-        
+getNumbers();        
       
 </script>
 </body>
