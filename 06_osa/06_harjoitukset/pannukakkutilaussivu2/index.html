@@ -9,6 +9,8 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+    <link rel="javascript" href="script.js"" />
+
     <title>Pancake tilaussivu</title>
   </head>
   <body>
@@ -34,7 +36,7 @@
               type="checkbox"
               id="nuts"
               value="1"
-              data-name="Nuts"
+              data-name="Pähkinät"
               data-category="toppings"
             />
             <label for="nuts">Pähkinät</label>
@@ -44,7 +46,7 @@
               type="checkbox"
               id="bananas"
               value="1"
-              data-name="Bananas"
+              data-name="Banaani"
               data-category="toppings"
             />
             <label for="bananas">Banaani</label>
@@ -54,7 +56,7 @@
               type="checkbox"
               id="syrup"
               value="1"
-              data-name="Syrup"
+              data-name="Siirappi"
               data-category="toppings"
             />
             <label for="syrup">Siirappi</label>
@@ -67,7 +69,7 @@
               type="checkbox"
               id="whippedCream"
               value="2"
-              data-name="Whipped Cream"
+              data-name="Kermavaahto"
               data-category="extras"
             />
             <label for="whippedCream">Kermavaahto - 2€</label>
@@ -77,32 +79,40 @@
               type="checkbox"
               id="iceCream"
               value="3"
-              data-name="Ice Cream"
+              data-name="Jäätelö"
               data-category="extras"
             />
             <label for="iceCream">Jäätelö - 3€</label>
           </div>
         </div>
         <div>
+            <div class="price-display">
+                <h3>Total Price: <span id="totalPrice">5€</span></h3>
+              </div>
           <h3>Sinun tietosi</h3>
           <div>
             <label for="customerName">Nimesi</label>
-            <input type="text" id="customerName" />
+            <input type="text" id="customerName" required/>
           </div>
-          <button>Tee tilaus</button>
+          <button onclick="createOrder()">Tee tilaus</button>
         </div>
-        <div class="order">
+        <div class="order"> <h2>TILAUKSEN YHTEENVETO</h2>
           <p>Tyyppi: <span id="order_type"></span></p>
           <p>Lisukkeet: <span id="order_toppings"></span></p>
           <p>Extrat: <span id="order_extras"></span></p>
           <p>Nimi: <span id="order_name"></span></p>
           <p>Hinta: <span id="order_price"></span></p>
+          
         </div>
-        <!--         <div class="price-display">
-          <h3>Total Price: <span id="totalPrice">5€</span></h3>
-        </div> -->
+
+        <a href="manage-orders.html"></a>
+
+        
       </div>
     </div>
+  
     <script src="script.js"></script>
+
   </body>
+
 </html>
